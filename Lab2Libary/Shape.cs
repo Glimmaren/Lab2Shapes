@@ -71,7 +71,7 @@ namespace ClassLibrary
             float p2X = RandomFloat();
             float p2Y = RandomFloat();
 
-            switch (rand.Next(3, 4))
+            switch (rand.Next(0, 7))
             {
                 case 0:
                     return new Circle(new Vector2(position.X, position.Y), randomRadius);
