@@ -12,18 +12,24 @@ namespace Lab2Console
     {
         static void Main(string[] args)
         {
-
+            //Test of list with 20 random shapes 
             Object[] arrayOfShapes = MakeAListOfrandomShapes(20);
+            PrintAllInfo(arrayOfShapes);
 
             //For test of the IEnumerble
             Triangle triangle = new Triangle(new Vector2(2.5f, 2.5f), new Vector2(2.5f, 5.5f), new Vector2(6.5f, 7.5f));
-
-            PrintAllInfo(arrayOfShapes);
-
             TestTheEnumerable(triangle);
+
+            //Test GenerateShape with fixed Center
+            var shape = Shape.GenerateShape(new Vector3(2.5f, 5.5f, 0));
+            Console.WriteLine("Test GenerateShape with fixed Center\n" + shape.ToString());
+
+            Console.WriteLine("\n\nMike drop!;)");
 
             Console.ReadLine();
         }
+
+        //Did every task in an method so it would be more easy to check each of my solutions
 
         public static Object[] MakeAListOfrandomShapes(int size)
         {
@@ -156,7 +162,11 @@ namespace Lab2Console
             }
             Console.WriteLine("**************");
 
+            Console.WriteLine("\n*********************************************************************************\n");
+
         }
+
+        //To make youre job easy i did an print all Method, not sure if its ok to use methods in methods but this is just for the print=)
         public static void PrintAllInfo(object[] o)
         {
             float theSumOfAllCircumference;

@@ -10,6 +10,7 @@ namespace ClassLibrary
         public abstract float Area { get; }
         public static object GenerateShape()
         {
+
             //Random Center
             float randomCenterX = RandomFloat();
             float randomCenterY = RandomFloat();
@@ -55,8 +56,6 @@ namespace ClassLibrary
 
             }
         }
-
-        //TODO fix triangle
         public static object GenerateShape(Vector3 position)
         {
             //Ranodm Size
